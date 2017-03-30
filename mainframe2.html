@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#999;}
+.tg td{font-family:Arial, sans-serif;font-size:13px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#999;color:#444;background-color:#F7FDFA;}
+.tg th{font-family:Arial, sans-serif;font-size:13px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#999;color:#fff;background-color:#26ADE4;}
+
+html{height:100%;width:100%;} 
+body{height:auto;width:100%; margin:0;}
+</style>
+<title>Untitled Document</title>
+</head>
+
+<body background="/background" style="background-size:contain;">
+        <audio src="http://ploracia.iptime.org:52273/musics2" autoplay="autoplay"></audio>
+
+<table class="tg" width="100%" height="100%" style="table-layout:fixed;">
+  <tr>
+    <th width="13%" class="tg-031e">Name</th>
+    <th width="25%" class="tg-031e">녹턴</th>
+    <th width="12%" class="tg-031e">Level</th>
+    <th width="25%" class="tg-031e"><input type = "label" name="levelst" id="levelst" value="200" width="40%" disabled="disabled"/></th>
+    <th class="tg-031e">      <input type="button" name="b_lvup" id="b_lvup" value="LVUP"  onClick="onclicklvup()"/>
+</th>
+  </tr>
+  <tr>
+    <td colspan="2" rowspan="4" class="tg-031e"><img src="/nokton" alt="" width="100%" height="auto" align="absmiddle"></td>
+    <td class="tg-031e" colspan="2">타입선택</td>
+    <td class="tg-031e">계열선택</td>
+  </tr>
+  <tr>
+    <td class="tg-031e" colspan="2">      <input type = "label" name="typeengine" id="typeengine" value="공학계" width ="40%" disabled="disabled"/>
+</td>
+    <td class="tg-031e">      <input type = "button" name="b_engine" id="b_engine" value="공학계"  onclick="onengineclick()" />
+</td>
+  </tr>
+  <tr>
+    <td class="tg-031e" colspan="2">&nbsp;</td>
+    <td class="tg-031e">            <input type = "button" name="b_same" id="b_same" value="공통계" onclick="onsameclick()"  />
+
+</td>
+  </tr>
+  <tr>
+    <td class="tg-031e" colspan="2"></td>
+    <td class="tg-031e">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">&nbsp;</td>
+    <td class="tg-031e">남은 포인트</td>
+    <td class="tg-031e"></td>
+    <td class="tg-031e">전체 포인트</td>
+    <td class="tg-031e"></td>
+  </tr>
+  <tr>
+    <td class="tg-031e"></td>
+    <td class="tg-031e">      <input type = "label" name="savepoint" id="savepoint" value="0" width="40%" disabled="disabled"/>
+</td>
+    <td class="tg-031e"></td>
+    <td class="tg-031e">      <input type = "label" name="allpoint" id="allpoint" value="0" width="40%" disabled="disabled"/>
+</td>
+    <td class="tg-031e" rowspan="3"></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">STAB</td>
+    <td class="tg-031e">            <input type = "label" name="stabst" id="stabst" value="135" width="40%" disabled="disabled"/>
+
+</td>
+    <td class="tg-031e">            <input type="submit" name="b_up1" id="b_up1" value="UP"  onclick="onup1()"/>
+
+</td>
+    <td class="tg-031e">            <input type = "label" name="p_stabst" id="p_stabst" value="8" width ="40%" disabled="disabled"/>
+
+</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">HACK</td>
+    <td class="tg-031e">            <input type = "label" name="hackst" id="hackst" value="2" width="40%" disabled="disabled"/>
+
+</td>
+    <td class="tg-031e">            <input type="submit" name="b_up2" id="b_up2" value="UP"  onclick="onup2()"/>
+
+</td>
+    <td class="tg-031e">            <input type = "label" name="p_hackst" id="p_hackst" value="2" width ="40%" disabled="disabled"/>
+
+</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">INT</td>
+    <td class="tg-031e">            <input type = "label" name="intst" id="intst" value="1" width="40%" disabled="disabled"/>
+
+</td>
+    <td class="tg-031e">            <input type="submit" name="b_up3" id="b_up3" value="UP" onclick="onup3()" />
+
+</td>
+    <td class="tg-031e">            <input type = "label" name="p_intst" id="p_intst" value="4" width ="40%" disabled="disabled"/>
+
+</td>
+    <td class="tg-031e" rowspan="2"></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">DEF</td>
+    <td class="tg-031e">            <input type = "label" name="defst" id="defst" value="65"  width="40%" disabled="disabled"/>
+
+</td>
+    <td class="tg-031e">            <input type="submit" name="b_up4" id="b_up4" value="UP" onclick="onup4()" />
+
+</td>
+    <td class="tg-031e">            <input type = "label" name="p_defst" id="p_defst" value="5" width ="40%" disabled="disabled"/>
+
+</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">MR</td>
+    <td class="tg-031e">                  <input type = "label" name="mrst" id="mrst" value="1" width="40%" disabled="disabled"/>
+
+
+</td>
+    <td class="tg-031e">      <input type="submit" name="b_up5" id="b_up5" value="UP" onclick="onup5()"/>
+</td>
+    <td class="tg-031e">           <input type = "label" name="p_mrst" id="p_mrst" value="4" width ="40%" disabled="disabled"/>
+
+</td>
+    <td class="tg-031e"></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">DEX</td>
+    <td class="tg-031e">      <input type = "label" name="dexst" id="dexst" value="200" width="40%" disabled="disabled"/>
+</td>
+    <td class="tg-031e">      <input type="submit" name="b_up6" id="b_up6" value="UP" onclick="onup6()"/>
+</td>
+    <td class="tg-031e">            <input type = "label" name="p_dexst" id="p_dexst" value="11" width ="40%" disabled="disabled"/>
+
+</td>
+    <td class="tg-031e" rowspan="2">             <input type="button" name="b_back" id="b_back" value="뒤로가기" onClick="btnclick2()" style="width:100%; height:100%;">
+
+    <script type="text/javascript">
+			function btnclick2() {
+		location.replace("/characterselect");         // 이동전 주소가 안보임. 
+		//history.go(-1);  // 이전페이지가기. ()안의 값이 현재페이지에 대한 상대좌표
+		//location.reload(); // 새로고침
+	};
+	    </script>
+</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">AGI</td>
+    <td class="tg-031e">      <input type = "label" name="agist" id="agist" value="200" width="40%" disabled="disabled"/>
+</td>
+    <td class="tg-031e"><input type="submit" name="b_up7" id="b_up7" value="UP" onclick="onup7()"/>
+    </span></div></td>
+    <td class="tg-031e">      <input type = "label" name="p_agist" id="p_agist" value="11" width ="40%" disabled="disabled"/>
+</td>
+  </tr>
+</table>
+<script type="text/javascript">
+var stabst1 = document.getElementById("stabst").value;
+var hackst1 = document.getElementById("hackst").value;
+var intst1 = document.getElementById("intst").value;
+var defst1 = document.getElementById("defst").value;
+var mrst1 = document.getElementById("mrst").value;
+var dexst1 = document.getElementById("dexst").value;
+var agist1 = document.getElementById("agist").value;
+var p_stabst1 = document.getElementById("p_stabst").value;
+var p_hackst1 = document.getElementById("p_hackst").value;
+var p_intst1 = document.getElementById("p_intst").value;
+var p_defst1 = document.getElementById("p_defst").value;
+var p_mrst1 = document.getElementById("p_mrst").value;
+var p_dexst1 = document.getElementById("p_dexst").value;
+var p_agist1 = document.getElementById("p_agist").value;
+var lvup1 = document.getElementById("b_lvup");
+
+var b_magic1 = document.getElementById("b_magic");
+var b_same1 = document.getElementById("b_same");
+var b_up11 = document.getElementById("b_up1");
+var b_up21 = document.getElementById("b_up2");
+var b_up31 = document.getElementById("b_up3");
+var b_up41 = document.getElementById("b_up4");
+var b_up51 = document.getElementById("b_up5");
+var b_up61 = document.getElementById("b_up6");
+
+var checktype = 0;
+
+	var levelst1 = document.getElementById("levelst").value;
+	var savepoint1 = document.getElementById("savepoint").value;
+	var allpoint1 = document.getElementById("allpoint").value;
+	
+	parseFloat(levelst1);
+	parseFloat(savepoint1);
+	parseFloat(allpoint1);
+	
+	function onengineclick() {
+		checktype=0;
+	}
+	function onsameclick() {
+		checktype=1;
+	}
+function onclicklvup() {
+	
+	
+	levelst1++;
+	if(levelst1 <=6) {
+		savepoint1 = parseFloat(savepoint1) + 2;
+		allpoint1 = parseFloat(allpoint1) + 2;
+	}else if(levelst1 <= 22) {
+		savepoint1 = parseFloat(savepoint1) + 3;
+		allpoint1 = parseFloat(allpoint1) + 3;
+	}else if(levelst1 <= 48) {
+		savepoint1 = parseFloat(savepoint1) + 4;
+		allpoint1 = parseFloat(allpoint1) + 4;
+	} else if(levelst1 <= 80) {
+		savepoint1 = parseFloat(savepoint1) + 5;
+		allpoint1 = parseFloat(allpoint1) + 5;
+	} else if(levelst1 <= 129) {
+		savepoint1 = parseFloat(savepoint1) + 6;
+		allpoint1 = parseFloat(allpoint1) + 6;
+	} else if(levelst1 <= 175) {
+		savepoint1 = parseFloat(savepoint1) + 7;
+		allpoint1 = parseFloat(allpoint1) + 7;
+	} else if(levelst1 <= 235) {
+		savepoint1 = parseFloat(savepoint1)+ 8;
+		allpoint1 = parseFloat(allpoint1) + 8;
+	} else if(levelst1 <= 265) {
+		savepoint1 = parseFloat(savepoint1) + 9;
+		allpoint1 = parseFloat(allpoint1) + 9;
+	} else if(levelst1 <= 285) {
+		savepoint1 = parseFloat(savepoint1) + 12;
+		allpoint1 = parseFloat(allpoint1) + 12;
+	}
+	
+	document.getElementById("savepoint").value = savepoint1;
+	document.getElementById("allpoint").value = allpoint1;
+	document.getElementById("levelst").value = levelst1;
+	
+	if(checktype == 0) {
+		stabst1 = parseFloat(stabst1) + 1;
+		dexst1 = parseFloat(dexst1) + 0.5;
+
+		p_stabst1 = 1 + parseFloat(parseFloat((parseFloat(stabst1) * 5)) + parseFloat(levelst1)) /125 ;
+		p_dexst1 = 2 + parseFloat(parseFloat((parseFloat(dexst1) * 5)) + parseFloat(levelst1)) /125 ;
+		console.log(p_dexst1);
+		document.getElementById("stabst").value = parseInt(stabst1);
+		document.getElementById("dexst").value = parseInt(dexst1);
+		document.getElementById("p_stabst").value = parseInt(p_stabst1);
+		document.getElementById("p_dexst").value = parseInt(p_dexst1);
+	}
+	
+	if(checktype == 1) {
+		dexst1 = parseFloat(dexst1) + 1;
+		agist1 = parseFloat(agist1) + 0.5;
+
+		p_dexst1 = 2 + parseFloat(parseFloat((parseFloat(dexst1) * 5)) + parseFloat(levelst1)) /125 ;
+		p_agist1 = 2 + parseFloat(parseFloat((parseFloat(agist1) * 5)) + parseFloat(levelst1)) /125 ;
+		console.log(p_agist1);
+		document.getElementById("agist").value = parseInt(agist1);
+		document.getElementById("dexst").value = parseInt(dexst1);
+		document.getElementById("p_agist").value = parseInt(p_agist1);
+		document.getElementById("p_dexst").value = parseInt(p_dexst1);
+	}
+};
+
+function onup1() {
+	if(parseInt(savepoint1) > 0 && p_stabst1 <=savepoint1){
+		stabst1 = parseFloat(stabst1) + 1;
+		p_stabst1 = 1 + parseFloat(parseFloat((parseFloat(stabst1) * 5)) + parseFloat(levelst1)) /125 ;
+		document.getElementById("stabst").value = parseInt(stabst1);
+		document.getElementById("p_stabst").value = parseInt(p_stabst1);
+		savepoint1 = parseInt(savepoint1) - parseInt(p_stabst1);
+		document.getElementById("savepoint").value = parseInt(savepoint1);
+	}
+}
+function onup2() {
+	if(parseInt(savepoint1) > 0 && p_hackst1 <= savepoint1 ){
+		hackst1 = parseFloat(hackst1) + 1;
+		p_hackst1 = 1 + parseFloat(parseFloat((parseFloat(hackst1) * 5)) + parseFloat(levelst1)) /125 ;
+		document.getElementById("hackst").value = parseInt(hackst1);
+		document.getElementById("p_hackst").value = parseInt(p_hackst1);
+		savepoint1 = parseInt(savepoint1) - parseInt(p_hackst1);
+		document.getElementById("savepoint").value = parseInt(savepoint1);
+	}
+}
+function onup3() {
+	if(parseInt(savepoint1) > 0 && p_intst1 <= savepoint1 ){
+		intst1 = parseFloat(intst1) + 1;
+		p_intst1 = 3 + parseFloat(parseFloat((parseFloat(intst1) * 5)) + parseFloat(levelst1)) /125 ;
+		document.getElementById("intst").value = parseInt(intst1);
+		document.getElementById("p_intst").value = parseInt(p_intst1);
+		savepoint1 = parseInt(savepoint1) - parseInt(p_intst1);
+		document.getElementById("savepoint").value = parseInt(savepoint1);
+	}
+}
+function onup4() {
+	if(parseInt(savepoint1) > 0 && p_defst1 <= savepoint1 ){
+		defst1 = parseFloat(defst1) + 1;
+		p_defst1 = 1 + parseFloat(parseFloat((parseFloat(defst1) * 5)) + parseFloat(levelst1)) /125 ;
+		document.getElementById("defst").value = parseInt(defst1);
+		document.getElementById("p_defst").value = parseInt(p_defst1);
+		savepoint1 = parseInt(savepoint1) - parseInt(p_defst1);
+		document.getElementById("savepoint").value = parseInt(savepoint1);
+	}
+}
+function onup5() {
+	if(parseInt(savepoint1) > 0 && p_mrst1 <= savepoint1 ){
+		mrst1 = parseFloat(mrst1) + 1;
+		p_mrst1 = 3 + parseFloat(parseFloat((parseFloat(mrst1) * 5)) + parseFloat(levelst1)) /125 ;
+		document.getElementById("mrst").value = parseInt(mrst1);
+		document.getElementById("p_mrst").value = parseInt(p_mrst1);
+		savepoint1 = parseInt(savepoint1) - parseInt(p_mrst1);
+		document.getElementById("savepoint").value = parseInt(savepoint1);
+	}
+}
+function onup6() {
+	if(parseInt(savepoint1) > 0 && p_dexst1 <= savepoint1 ){
+		dexst1 = parseFloat(dexst1) + 1;
+		p_dexst1 = 2 + parseFloat(parseFloat((parseFloat(dexst1) * 5)) + parseFloat(levelst1)) /125 ;
+		document.getElementById("dexst").value = parseInt(dexst1);
+		document.getElementById("p_dexst").value = parseInt(p_dexst1);
+		savepoint1 = parseInt(savepoint1) - parseInt(p_dexst1);
+		document.getElementById("savepoint").value = parseInt(savepoint1);
+	}
+}
+function onup7() {
+	if(parseInt(savepoint1) > 0 && p_agist1 <= savepoint1 ){
+		agist1 = parseFloat(agist1) + 1;
+		p_agist1 = 2 + parseFloat(parseFloat((parseFloat(agist1) * 5)) + parseFloat(levelst1)) /125 ;
+		document.getElementById("agist").value = parseInt(agist1);
+		document.getElementById("p_agist").value = parseInt(p_agist1);
+		savepoint1 = parseInt(savepoint1) - parseInt(p_agist1);
+		document.getElementById("savepoint").value = parseInt(savepoint1);
+	}
+}
+</script>
+</body>
+</html>
